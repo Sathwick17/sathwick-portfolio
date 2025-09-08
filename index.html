@@ -474,9 +474,9 @@
             50% { transform: translateX(-50%) translateY(-10px); }
         }
 
-        .chart-bar:nth-child(1) { left: 10px; width: 20px; height: 60px; animation: growBar 2s ease 1s forwards; }
+        .chart-bar:nth-child(1) { left: 10px; width: 20px; height: 85px; animation: growBar 2s ease 1s forwards; }
         .chart-bar:nth-child(2) { left: 40px; width: 20px; height: 100px; animation: growBar 2s ease 1.2s forwards; }
-        .chart-bar:nth-child(3) { left: 70px; width: 20px; height: 80px; animation: growBar 2s ease 1.4s forwards; }
+        .chart-bar:nth-child(3) { left: 70px; width: 20px; height: 90px; animation: growBar 2s ease 1.4s forwards; }
         .chart-bar:nth-child(4) { left: 100px; width: 20px; height: 120px; animation: growBar 2s ease 1.6s forwards; }
         .chart-bar:nth-child(5) { left: 130px; width: 20px; height: 90px; animation: growBar 2s ease 1.8s forwards; }
         .chart-bar:nth-child(6) { left: 160px; width: 20px; height: 110px; animation: growBar 2s ease 2s forwards; }
@@ -1599,36 +1599,42 @@
             }
 
             .hero h1 {
-                font-size: 2.4rem; /* Increased from 2.2rem */
+                font-size: 2rem; /* Further reduced for mobile */
             }
 
             .hero .tagline {
-                font-size: 1.25rem; /* Increased from 1.15rem */
+                font-size: 1.1rem; /* Further reduced for mobile */
             }
 
             .hero .description {
-                font-size: 1.15rem; /* Increased from previous value */
+                font-size: 1rem; /* Further reduced for mobile */
+                margin-bottom: 1rem;
             }
 
             .hero-data-visual {
-                width: 110px; /* Increased from 100px */
-                height: 110px; /* Increased from 100px */
-                font-size: 2.4rem; /* Increased from 2.2rem */
+                width: 80px; /* Smaller on mobile */
+                height: 80px;
+                font-size: 2rem;
+                margin-bottom: 1rem;
             }
 
             .hero-chart-container {
-                width: 250px;
-                height: 150px;
+                width: 200px;
+                height: 120px;
+                margin-bottom: 1rem;
             }
 
             .cta-buttons {
-                flex-direction: column;
+                display: flex;
+                justify-content: center;
                 align-items: center;
+                gap: 0.8rem; /* Reduced gap */
+                flex-wrap: wrap; /* Allow wrapping if needed */
             }
 
             .cta-button {
-                font-size: 1.1rem; /* Increased */
-                padding: 0.8rem 1.4rem; /* Increased */
+                font-size: 1rem;
+                padding: 0.7rem 1.2rem;
             }
 
             .section {
@@ -1809,9 +1815,9 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-chart-container">
-                <div class="chart-bar" style="--final-height: 60px;"></div>
+                <div class="chart-bar" style="--final-height: 85px;"></div>
                 <div class="chart-bar" style="--final-height: 100px;"></div>
-                <div class="chart-bar" style="--final-height: 80px;"></div>
+                <div class="chart-bar" style="--final-height: 90px;"></div>
                 <div class="chart-bar" style="--final-height: 120px;"></div>
                 <div class="chart-bar" style="--final-height: 90px;"></div>
                 <div class="chart-bar" style="--final-height: 110px;"></div>
@@ -2343,7 +2349,7 @@
 
         // Enhanced interactive chart bars with data tooltips
         document.querySelectorAll('.chart-bar').forEach((bar, index) => {
-            const dataValues = ['60%', '85%', '70%', '95%', '75%', '90%', '65%', '80%', '88%'];
+            const dataValues = ['85%', '85%', '90%', '95%', '75%', '90%', '65%', '80%', '88%'];
             const dataLabels = ['Python', 'ML', 'SQL', 'Analytics', 'Visualization', 'Big Data', 'Statistics', 'Cloud', 'Research'];
             
             // Create tooltip
