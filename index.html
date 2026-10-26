@@ -280,32 +280,6 @@
             animation: revealIn 0.7s ease 0.4s forwards;
         }
 
-        .stats-strip {
-            display: flex; gap: clamp(1.5rem, 4vw, 3.5rem);
-            flex-wrap: wrap; justify-content: center;
-            margin-top: 3.5rem;
-            padding-top: 2.5rem;
-            border-top: 1px solid var(--border-hairline);
-            width: 100%;
-            opacity: 0; transform: translateY(16px);
-            animation: revealIn 0.7s ease 0.55s forwards;
-        }
-
-        .stat { text-align: center; }
-
-        .stat-number {
-            font-size: clamp(1.75rem, 3vw, 2.4rem);
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: var(--text-primary);
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            color: var(--text-tertiary);
-            margin-top: 0.35rem;
-        }
-
         .cta-button {
             display: inline-flex; align-items: center; gap: 0.5rem;
             padding: 0.85rem 1.5rem;
@@ -797,25 +771,6 @@
                     Get In Touch
                 </a>
             </div>
-
-            <div class="stats-strip">
-                <div class="stat">
-                    <div class="stat-number" data-target="2" data-suffix="+">0</div>
-                    <div class="stat-label">Years Experience</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number" data-target="11">0</div>
-                    <div class="stat-label">Projects Shipped</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number" data-target="3.3" data-suffix="M+" data-decimals="1">0</div>
-                    <div class="stat-label">Records Processed</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number" data-target="5" data-suffix="+">0</div>
-                    <div class="stat-label">Certifications</div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -955,27 +910,78 @@
             <h2 class="section-title">Experience</h2>
             <div class="timeline">
 
-                <!-- Youro -->
+                <!-- CampusMesh -->
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">Feb 2026 to Present</div>
-                        <h3 class="timeline-title">Data Science Intern</h3>
-                        <div class="timeline-company">Youro, LLC · Remote</div>
+                        <div class="timeline-date">Oct 2026 to Present</div>
+                        <h3 class="timeline-title">AI Engineer, Delivery Lead</h3>
+                        <div class="timeline-company">CampusMesh</div>
                         <ul>
-                            <li>Built <strong>Python/SQL/Azure data pipelines</strong> as a founding member of the data team, consolidating patient data into one central store at 99%+ data quality and cutting manual prep time by 60%.</li>
-                            <li>Developed <strong>Azure ML severity scoring models</strong> returning results in under 100ms, routing patients to the right specialist before they book.</li>
-                            <li>Designed a <strong>RAG system using Azure services</strong> grounding patient guidance in trusted urology guidelines, meaningfully reducing unreliable responses and improving answer accuracy.</li>
-                            <li>Built <strong>Tableau dashboards</strong> tracking triage, booking, and engagement across 5+ KPIs, presenting directly to the CEO to drive early product decisions.</li>
+                            <li>Leading a team of 2 with the CTO to deliver <strong>CampusIQ, an LLM discovery assistant</strong> on a platform of ~2K active students, while owning its full backend.</li>
+                            <li>Rebuilt CampusIQ's <strong>LLM harness with a deterministic answer path and config driven Bedrock client</strong>, holding p95 latency under 3s and retrieval under 300ms.</li>
+                            <li>Designed a <strong>100-question evaluation set and per query audit records</strong> to test whether CampusIQ answers only from CampusMesh data, guiding prompt fixes.</li>
+                            <li>Secured CampusIQ's <strong>AWS Lambda API</strong>, closing an open token endpoint and adding ownership checks on 5 handlers so students see only their own chats and files.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <h4>Technologies & Tools</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag-experience"><i class="fab fa-python"></i> Python</span>
+                                <span class="tech-tag-experience"><i class="fab fa-aws"></i> AWS Bedrock</span>
+                                <span class="tech-tag-experience"><i class="fas fa-bolt"></i> AWS Lambda</span>
+                                <span class="tech-tag-experience"><i class="fas fa-robot"></i> LLMs</span>
+                                <span class="tech-tag-experience"><i class="fas fa-search"></i> Retrieval</span>
+                                <span class="tech-tag-experience"><i class="fas fa-vial"></i> LLM Evaluation</span>
+                                <span class="tech-tag-experience"><i class="fas fa-shield-alt"></i> API Security</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Redprint -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Sep 2026 to Present</div>
+                        <h3 class="timeline-title">Data Scientist</h3>
+                        <div class="timeline-company">Redprint · Amherst, NY</div>
+                        <ul>
+                            <li>Developed an <strong>LLM evaluation harness</strong> for a gym aware workout assistant, scoring 300+ plans against live inventories and cutting equipment hallucinations 42%.</li>
+                            <li>Engineered <strong>structured extraction over 4K+ workout histories and 300+ exercises</strong>, creating the feature layer behind personalized workout recommendations.</li>
+                            <li>Built <strong>Python and SQL pipelines</strong> unifying NFC tap telemetry, workout logs, and equipment inventories across 20 gyms, matching 40K+ monthly taps at 97%.</li>
                         </ul>
                         <div class="tech-stack">
                             <h4>Technologies & Tools</h4>
                             <div class="tech-tags">
                                 <span class="tech-tag-experience"><i class="fab fa-python"></i> Python</span>
                                 <span class="tech-tag-experience"><i class="fas fa-database"></i> SQL</span>
-                                <span class="tech-tag-experience"><i class="fab fa-microsoft"></i> Azure</span>
-                                <span class="tech-tag-experience"><i class="fas fa-robot"></i> Azure ML</span>
-                                <span class="tech-tag-experience"><i class="fas fa-comments"></i> RAG</span>
+                                <span class="tech-tag-experience"><i class="fas fa-vial"></i> LLM Evaluation</span>
+                                <span class="tech-tag-experience"><i class="fas fa-cogs"></i> Feature Engineering</span>
+                                <span class="tech-tag-experience"><i class="fas fa-code-branch"></i> Data Pipelines</span>
+                                <span class="tech-tag-experience"><i class="fas fa-wifi"></i> NFC Telemetry</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Youro -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Feb 2026 to Aug 2026</div>
+                        <h3 class="timeline-title">Data Science Intern</h3>
+                        <div class="timeline-company">Youro, LLC · Remote</div>
+                        <ul>
+                            <li>Trained <strong>scikit-learn models on patient symptom features</strong> to predict severity scores and support specialist routing, achieving inference latency under 100ms.</li>
+                            <li>Automated <strong>preprocessing and feature engineering pipelines</strong> with Pandas and NumPy, lifting training data quality 26% and saving 30% of preparation time.</li>
+                            <li>Presented <strong>5+ product KPIs from Tableau</strong> to the CEO, informing decisions to build a provider platform and keep data internal through RAG.</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <h4>Technologies & Tools</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag-experience"><i class="fab fa-python"></i> Python</span>
+                                <span class="tech-tag-experience"><i class="fas fa-robot"></i> Scikit-learn</span>
+                                <span class="tech-tag-experience"><i class="fas fa-table"></i> Pandas</span>
+                                <span class="tech-tag-experience"><i class="fas fa-calculator"></i> NumPy</span>
                                 <span class="tech-tag-experience"><i class="fas fa-chart-bar"></i> Tableau</span>
+                                <span class="tech-tag-experience"><i class="fas fa-comments"></i> RAG</span>
                             </div>
                         </div>
                     </div>
@@ -997,21 +1003,22 @@
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-date">Aug 2022 to Apr 2024</div>
-                        <h3 class="timeline-title">Software Engineer(Data Engineering and Analytics)</h3>
+                        <h3 class="timeline-title">Software Engineer</h3>
                         <div class="timeline-company">Sony India Software Centre · Bengaluru</div>
                         <ul>
-                            <li>Engineered <strong>batch ETL pipelines</strong> in Python and SQL on AWS across 5+ internal data feeds, cutting manual reporting effort by 15%.</li>
-                            <li>Implemented <strong>schema validation, null checks, and duplicate detection</strong>, improving downstream data reliability across reporting datasets consumed by 3 business units.</li>
-                            <li>Developed <strong>analytics-ready datasets</strong> feeding Power BI and Tableau dashboards for product, finance, and engineering teams, reducing data-request-to-insight turnaround by 20%.</li>
-                            <li>Integrated <strong>GitLab CI/CD pipelines with Jira APIs</strong> to automate issue tracking and workflow updates, reducing cross-team coordination effort by 20%.</li>
-                            <li>Built a <strong>GitLab API integrated dashboard</strong> automating Wiki access requests and manager approval routing, cutting manual documentation coordination by 30%.</li>
+                            <li>Performed <strong>exploratory data analysis</strong> on datasets across teams using Python and SQL to identify trends and support product and operations planning.</li>
+                            <li>Engineered <strong>batch ETL pipelines in Python and SQL on AWS (Lambda, Glue, S3)</strong> across 5+ internal data feeds, saving 15% of manual reporting effort.</li>
+                            <li>Developed <strong>reporting datasets and dashboard views</strong> for product, finance, and engineering teams, shortening request to insight turnaround by 20%.</li>
+                            <li>Integrated <strong>GitLab CI/CD pipelines with Jira APIs</strong> to automate issue tracking and workflow updates, reducing coordination effort across teams by 20%.</li>
+                            <li>Created a <strong>GitLab API dashboard</strong> for Sony's First Challenge to automate Wiki access requests and manager approvals, trimming manual coordination by 30%.</li>
                         </ul>
                         <div class="tech-stack">
                             <h4>Technologies & Tools</h4>
                             <div class="tech-tags">
                                 <span class="tech-tag-experience"><i class="fab fa-python"></i> Python</span>
                                 <span class="tech-tag-experience"><i class="fas fa-database"></i> SQL</span>
-                                <span class="tech-tag-experience"><i class="fab fa-aws"></i> AWS</span>
+                                <span class="tech-tag-experience"><i class="fab fa-aws"></i> AWS (Lambda, Glue, S3)</span>
+                                <span class="tech-tag-experience"><i class="fas fa-search"></i> EDA</span>
                                 <span class="tech-tag-experience"><i class="fab fa-gitlab"></i> GitLab CI/CD</span>
                                 <span class="tech-tag-experience"><i class="fas fa-chart-bar"></i> Power BI</span>
                                 <span class="tech-tag-experience"><i class="fas fa-chart-area"></i> Tableau</span>
@@ -1086,16 +1093,15 @@
                     <div class="project-image"><i class="fas fa-taxi"></i></div>
                     <div class="project-content">
                         <h3 class="project-title">RideFlow Analytics: NYC Taxi Demand Forecasting with MLOps Pipeline</h3>
-                        <p>Engineered an end-to-end MLOps pipeline on AWS ingesting 24 months of NYC Yellow Taxi Parquet data via automated Lambda triggers into a structured S3 hierarchy, with Glue jobs handling transformation and Athena enabling serverless querying. Built and tuned two LightGBM demand forecasting models using 28-day lag features and temporal aggregates, tracking all experiments with MLflow to eliminate training loss across restarts and achieving MAE of 2.895 and MAPE of 9.23%. Deployed a Streamlit app on AWS Elastic Beanstalk serving 200+ concurrent users, with RDS schema indexing on frequently joined columns cutting query latency by 25% and improving real-time dashboard responsiveness.</p>
+                        <p>Built a LightGBM time series model on 3.5M+ NYC taxi trips forecasting hourly demand by location at MAE 2.895 and MAPE 9.23% for 50+ daily users. Designed a normalized AWS RDS schema with optimized SQL indexes, lowering query latency by 25% for an hourly refreshed Streamlit forecast dashboard. Streamlined AWS Glue and Athena workflows processing 3.5M+ records, reducing pipeline overhead by 40% and keeping data fresh for model training.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">LightGBM</span>
-                            <span class="tech-tag">Hopsworks</span>
-                            <span class="tech-tag">Confluent Kafka</span>
-                            <span class="tech-tag">MLflow</span>
-                            <span class="tech-tag">GitHub Actions</span>
+                            <span class="tech-tag">AWS Lambda</span>
+                            <span class="tech-tag">AWS Glue</span>
+                            <span class="tech-tag">Athena</span>
+                            <span class="tech-tag">AWS RDS</span>
                             <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">GeoPandas</span>
                         </div>
                     </div>
                 </div>
@@ -1105,17 +1111,16 @@
                     <div class="project-image"><i class="fas fa-comments"></i></div>
                     <div class="project-content">
                         <h3 class="project-title">Sentiment Wars: ML & Transformer Benchmarking for Sentiment Classification</h3>
-                        <p>Built an end-to-end sentiment classification pipeline on Amazon review data, benchmarking Logistic Regression, Random Forest, SVM, and Naïve Bayes against fine-tuned DistilBERT and DeBERTa v3 base transformer models, achieving up to 93.5% accuracy. Engineered text features using TF-IDF vectorization, n-gram analysis, and polarity scoring, with GridSearchCV hyperparameter tuning and all runs tracked via MLflow integrated with DAGsHub for full experiment reproducibility. Deployed a live Streamlit app serving the fine-tuned DeBERTa model from Hugging Face Hub with real-time confidence scoring, and built a Power BI dashboard for sentiment trend analysis.</p>
+                        <p>Benchmarked TF-IDF machine learning models against fine-tuned DistilBERT and DeBERTa v3 on 10K+ Amazon reviews in a team of 3 to select the best classifier. Fine-tuned DeBERTa v3 base to 93.5% accuracy on Amazon review sentiment, outperforming DistilBERT at 91.8% and XGBoost at 88.3%. Logged 30+ model runs in MLflow to centralize evaluation metrics and reproducibility, speeding model comparison cycles by 30%.</p>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                            <span class="tech-tag">DistilBERT</span>
+                            <span class="tech-tag">Hugging Face Transformers</span>
                             <span class="tech-tag">DeBERTa</span>
-                            <span class="tech-tag">TF-IDF</span>
+                            <span class="tech-tag">DistilBERT</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">XGBoost</span>
                             <span class="tech-tag">MLflow</span>
-                            <span class="tech-tag">DAGsHub</span>
                             <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">Power BI</span>
                         </div>
                     </div>
                 </div>
@@ -1529,31 +1534,6 @@
             if (cursorDot) cursorDot.style.display = 'none';
             if (cursorRing) cursorRing.style.display = 'none';
         }
-
-        // Count-up stats
-        const statObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                const el = entry.target;
-                const target = parseFloat(el.dataset.target);
-                const decimals = parseInt(el.dataset.decimals || '0', 10);
-                const suffix = el.dataset.suffix || '';
-                const duration = 1200;
-                const start = performance.now();
-
-                function tick(now) {
-                    const progress = Math.min((now - start) / duration, 1);
-                    const eased = 1 - Math.pow(1 - progress, 3);
-                    const value = target * eased;
-                    el.textContent = value.toFixed(decimals) + suffix;
-                    if (progress < 1) requestAnimationFrame(tick);
-                }
-                requestAnimationFrame(tick);
-                statObserver.unobserve(el);
-            });
-        }, { threshold: 0.5 });
-
-        document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
 
         // Hero parallax on scroll
         const heroContent = document.querySelector('.hero-content');
